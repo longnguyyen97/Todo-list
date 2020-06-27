@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/','TodosController@index'); //point to the todo controller as homepage
+
+Route::resource('todo', 'TodosController'); //create a page for todo controller
